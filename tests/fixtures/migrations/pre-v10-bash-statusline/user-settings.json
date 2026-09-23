@@ -1,7 +1,0 @@
-{
-  "model": "opus",
-  "statusLine": {
-    "type": "command",
-    "command": "bash \"$HOME/.claude/scripts/statusline.sh\""
-  }
-}
