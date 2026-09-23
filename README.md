@@ -22,6 +22,7 @@ Bun must already be installed; this project never installs it for you:
 
 ```sh
 bun run check
+mkdir dist
 bun scripts/export.mjs --host codex --out ./dist/codex
 bun scripts/export.mjs --host claude --out ./dist/claude
 ```
@@ -34,7 +35,7 @@ node scripts/export.mjs --host codex --out ./dist/codex
 ```
 
 The output directory must not exist, and its parent must already exist.
-Create `dist` yourself first (PowerShell: `New-Item -ItemType Directory dist`).
+The commands above create the parent with `mkdir dist`, also available in PowerShell.
 The exporter rejects symlink/junction ancestors and never replaces a directory.
 It creates a standalone reviewable bundle, not an installation in your home.
 

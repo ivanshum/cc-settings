@@ -106,7 +106,7 @@ test("existing destination junctions are rejected", async () => {
 
 test("active repository inventory excludes inherited runtimes and integrations", async () => {
   assert.deepEqual(await filesAt(root), [
-    ".gitignore", "AGENTS.md", "LICENSE", "NOTICE.md", "README.md", "SECURITY.md",
+    ".gitattributes", ".gitignore", "AGENTS.md", "LICENSE", "NOTICE.md", "README.md", "SECURITY.md",
     "instructions/PRIVACY.md", "package.json", "scripts/export.mjs", "tests/export.test.mjs",
     ...skills.map(name => "skills/" + name + "/SKILL.md"),
   ].sort());
