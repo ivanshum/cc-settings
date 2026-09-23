@@ -25,10 +25,20 @@ This guidance does not grant tool access or override host approvals.
 - Read before editing; trace callers and preserve working structure.
 - Prefer Bun for new JavaScript/TypeScript projects. In existing repositories use
   their lockfile, package manager and scripts; do not silently migrate tooling.
-- Select frameworks and hosting for project requirements. Next.js, React, Astro,
-  Vercel and Cloudflare are options, never mandatory defaults.
-- Biome is optional. Preserve existing ESLint/Prettier and framework checks unless
-  a tooling migration is explicitly requested and verified.
+- Prefer Astro for public-facing websites and content resources. A dashboard
+  requirement does not by itself justify moving the public site to Next.js.
+- Evaluate established CMS and administration solutions first, including headless
+  CMS platforms and WordPress. Build a custom dashboard only when concrete
+  requirements need custom logic that existing solutions cannot reasonably cover.
+- Reserve Next.js consideration for justified custom dashboard/backend application
+  work; keep public-facing resources on Astro by default. Do not choose a hosting
+  vendor implicitly. Project requirements and explicit user choices can override
+  these defaults.
+- Prefer Biome for new projects and as the direction for deliberate formatter/linter
+  migrations. Before migrating, check language/framework support and required rule
+  coverage; retain complementary tools where needed. Preserve existing checks until
+  a migration is explicitly requested, implemented and verified. Biome does not
+  replace framework or TypeScript type checks.
 - Diagnose before fixing. Keep bug fixes focused and tests meaningful.
 - Use semantic HTML, keyboard access, visible focus, readable contrast, responsive
   images and reduced-motion behavior.

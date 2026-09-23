@@ -56,14 +56,22 @@ Bun is a runtime, package manager and test runner. It is independent of any web
 framework or hosting provider. Prefer it for new JS/TS projects; migrate an
 existing lockfile only when requested and verify compatibility.
 
-Next.js is optional, not required. It can be self-hosted; choose it only when its
-application features justify the operational complexity. Astro is a suitable
-option for content-led sites. No hosting vendor is assumed.
+Astro is the preferred framework for public-facing websites and content resources.
+A need for administration does not imply rebuilding the public site in Next.js.
+Evaluate existing CMS/admin solutions first, including headless CMS platforms and
+WordPress. Consider a custom dashboard only when its required logic cannot reasonably
+be served by an established solution. Next.js is an option for that justified
+custom dashboard/backend work, not the default for public resources. These are
+project-selection preferences, not claims that a framework cannot do other work.
+No hosting vendor is assumed.
 
-Biome combines a formatter, linter and code assistance (such as import sorting).
-It is optional. Preserve ESLint/Prettier where already configured; verify language,
-framework and rule coverage before any migration. This small distribution needs
-no formatter dependency or dependency-install step.
+Biome is the preferred formatter/linter direction for new projects and deliberate
+migrations. It combines formatting, linting and assistance such as import sorting.
+Before replacing ESLint/Prettier, verify language/framework support and required
+rule coverage; retain complementary tools where needed. Keep framework and
+TypeScript checks. Existing repositories retain their tooling until migration is
+explicitly requested and verified. This small distribution itself needs no
+formatter dependency or dependency-install step.
 
 ## Privacy boundary
 
