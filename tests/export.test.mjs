@@ -134,3 +134,15 @@ test("skills have valid, matching discovery metadata and no scaffold placeholder
     assert.doesNotMatch(text, /\[TODO:/);
   }
 });
+
+test("both host exports include the approved planning workflow", async () => {
+  for (const host of ["codex", "claude"]) {
+    const parent = await scratch();
+    const out = join(parent, "planning-bundle");
+    await exportBundle({ host, out });
+    const instructions = await readFile(join(out, host === "codex" ? "AGENTS.md" : "CLAUDE.md"), "utf8");
+    assert.match(instructions, /## Planning and version control/);
+    const plan = await readFile(join(out, host === "codex" ? ".agents" : ".claude", "skills", "private-plan", "SKILL.md"), "utf8");
+    assert.match(plan, /name: private-plan/);
+  }
+});

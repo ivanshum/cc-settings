@@ -8,3 +8,5 @@ Never install hooks, MCP servers, schedulers, permission overrides, or remote pr
 Retain the MIT notice and the upstream attribution in NOTICE.md.
 Never include user/project data in distributed files. Tests use synthetic fixtures.
 Preserve project-local instructions and tooling. No required framework, hosting provider, model, or formatter.
+Follow the Planning and version control section in instructions/PRIVACY.md before repository changes.
+Use small issues, planned sub-issues and focused Conventional Commit PRs targeting privacy-edition.
