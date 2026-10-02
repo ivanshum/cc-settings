@@ -6,7 +6,7 @@ for new projects. Existing projects keep their package manager and checks.
 ## What is included
 
 - Portable privacy and engineering instructions.
-- Five workflows: private-explore, private-fix, private-review, private-verify,
+- Six workflows: private-plan, private-explore, private-fix, private-review, private-verify,
   and private-ui-review.
 - A dependency-free, offline exporter for Codex or Claude project directories.
 - Tests for the distribution boundary, collision safety and export contents.
@@ -49,6 +49,14 @@ Review the generated README and files before adoption:
 Existing host skills, plugins, settings and permissions remain unchanged. This
 package does not disable or sanitize previously installed upstream components.
 For a clean evaluation, use a fresh project with reviewed host configuration.
+
+## Change workflow
+
+Follow the planning and version-control section in [the portable guidance](instructions/PRIVACY.md).
+Use private-plan to turn a larger task into agreed, linked issues before implementation.
+This fork uses focused branches from privacy-edition, Conventional Commits and reviewed
+squash PRs targeting privacy-edition. Do not port the upstream-derived main branch
+into the reviewed distribution.
 
 ## Tooling choices
 

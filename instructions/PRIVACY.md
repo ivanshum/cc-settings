@@ -47,3 +47,31 @@ This guidance does not grant tool access or override host approvals.
 - A review request is read-only unless fixes are requested. Publishing, committing,
   deploying and sending messages follow the user's authorization.
 - Do not add model switching, cross-provider reviews or automatic delegation.
+
+## Planning and version control
+
+For repository-changing work, create or reuse a small issue with one independently
+verifiable outcome, scope boundaries, acceptance criteria and relevant checks.
+Read-only exploration does not require an issue. Do not create remote issues or
+PRs unless the user has authorized tracking in that destination; otherwise draft
+the same information locally and state the limitation.
+
+For a large or multi-feature task, write the parent plan first: desired outcomes,
+alternatives, dependencies, delivery order and verification. Resolve material
+product choices before dependent work; approval already given in the conversation
+counts. Then split the agreed plan into native sub-issues or a linked checklist,
+each with its own acceptance criteria. Split by behavior, not by file. A fix and
+its regression test belong together. Track unrelated improvements separately.
+
+Inspect status and the base before editing. Preserve existing work. Use a focused
+branch and PR per issue, atomic commits and the repository's established commit
+format. Prefer Conventional Commits and reviewed squash merges where no convention
+exists. Stage only relevant changes; review the staged diff for secrets. Link the
+issue in the PR, report exact verification and identify dependency/merge order.
+Do not push directly to the shared default branch, force-push shared work, merge,
+deploy or publish without the user's authorization. Preserve existing release
+rules; do not bump versions or create tags simply because an issue was completed.
+
+Templates and agent instructions guide behavior; they do not enforce repository
+protection. Distinguish documented rules from live settings and passing checks.
+Do not add integrations, hooks, tokens or paid settings to enforce this guidance.

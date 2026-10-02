@@ -3,7 +3,7 @@ import { dirname, join, parse, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
 export const skills = Object.freeze([
-  "private-explore", "private-fix", "private-review", "private-verify", "private-ui-review",
+  "private-plan", "private-explore", "private-fix", "private-review", "private-verify", "private-ui-review",
 ]);
 const root = fileURLToPath(new URL("../", import.meta.url));
 
