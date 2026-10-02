@@ -75,3 +75,17 @@ rules; do not bump versions or create tags simply because an issue was completed
 Templates and agent instructions guide behavior; they do not enforce repository
 protection. Distinguish documented rules from live settings and passing checks.
 Do not add integrations, hooks, tokens or paid settings to enforce this guidance.
+
+For dependent outcomes, prefer registered native stacks when the repository and
+installed tooling support them. Independent changes target the normal base. A
+manually chained set of PR bases is not proof of native stack registration. Check
+actual membership/order and candidate checks before relying on automatic rebase,
+retargeting or inherited CI. Inheritance cannot create missing trunk protection.
+
+Approval to merge an upper native layer must cover every lower unmerged PR it
+includes. Select the repository's merge method explicitly. Stack sync/push/submit
+and some link forms mutate remote state; inspect installed help and authorization
+before running them. Preserve manual retarget/rebase fallback when native support
+is unavailable. Do not install tooling, automatically rewrite shared branches,
+prune branches or merge as a side effect of these portable instructions. Report
+installation, local tests, native registration and post-merge behavior separately.

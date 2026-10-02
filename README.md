@@ -54,6 +54,9 @@ For a clean evaluation, use a fresh project with reviewed host configuration.
 
 Follow the planning and version-control section in [the portable guidance](instructions/PRIVACY.md).
 Use private-plan to turn a larger task into agreed, linked issues before implementation.
+Native stack guidance distinguishes dependent layers from independent PRs and requires
+merge approval for the exact included set. No stack executable or upstream agent
+workflow is bundled or installed by the offline exporter.
 This fork uses focused branches from privacy-edition, Conventional Commits and reviewed
 squash PRs targeting privacy-edition. Do not port the upstream-derived main branch
 into the reviewed distribution.
